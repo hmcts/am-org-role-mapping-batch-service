@@ -15,7 +15,7 @@ public class DeleteExpiredRecords implements Tasklet {
     public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) {
         log.info("::LeafRouteTask starts::");
 
-        //steps: 1. Create a datasource in application.yaml file.
+        //steps: 1. Create a datasource in application.yml file.
         // Please refer to org-role-mapping-service project's application.yaml for that
         // https://github.com/hmcts/am-org-role-mapping-service
         //(UPDATE: Datasource has been configured. Pleae verify)
