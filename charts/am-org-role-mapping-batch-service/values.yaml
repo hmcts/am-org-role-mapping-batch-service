@@ -1,4 +1,4 @@
-java:
+job:
   image: 'hmctspublic.azurecr.io/am/org-role-mapping-batch-service:latest'
   ingressHost: am-org-role-mapping-batch-service-{{ .Values.global.environment }}.service.core-compute-{{ .Values.global.environment }}.internal
   applicationPort: 4080
@@ -7,3 +7,5 @@ java:
   schedule: "*/10 * * * *"
   global:
     jobKind: CronJob
+postgres:
+  enabled: false
