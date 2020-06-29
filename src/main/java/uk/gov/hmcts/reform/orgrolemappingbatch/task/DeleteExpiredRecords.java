@@ -19,10 +19,12 @@ public class DeleteExpiredRecords implements Tasklet {
         // Please refer to org-role-mapping-service project's application.yaml for that
         // https://github.com/hmcts/am-org-role-mapping-service
         //(UPDATE: Datasource has been configured. Pleae verify)
-        //2. While creating the datasource, we will need to setup the environment variables as in https://github.com/hmcts/am-org-role-mapping-service
+        //2. While creating the datasource, we will need to setup the environment
+        // variables as in https://github.com/hmcts/am-org-role-mapping-service
         //Same variables can be reused.
 
-        //3. Once datasource is ready, write a query using Spring JDBC to fetch the number of records from Role_Assignment table
+        //3. Once datasource is ready, write a query using Spring JDBC to fetch the
+        // number of records from Role_Assignment table
         //Reference: https://spring.io/guides/gs/relational-data-access/
 
         //test the changes in local docker
