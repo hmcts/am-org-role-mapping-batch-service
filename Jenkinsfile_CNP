@@ -33,6 +33,8 @@ def secrets = [
 
 ]	
 
+def branchesToSync = ['demo', 'perftest']
+
 withPipeline(type, product, component) {	
   onMaster {	
     enableSlackNotifications('#am-org-role-mapping-batch-service-builds')	
@@ -48,7 +50,7 @@ withPipeline(type, product, component) {
   disableLegacyDeployment()	
   nonServiceApp()
 
-  syncBranchesWithMaster('demo', 'perftest')
+  syncBranchesWithMaster(branchesToSync)
 
   after('functionalTest:preview') {	
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/cucumber/**/*'	
