@@ -9,7 +9,7 @@ properties(
   ]	
 )	
 
-@Library("Infrastructure")	
+@Library("Infrastructure@sync-branches-with-master")
 
 def type = "java"	
 def product = "am"	
