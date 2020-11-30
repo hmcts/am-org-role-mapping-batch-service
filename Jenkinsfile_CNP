@@ -46,7 +46,9 @@ withPipeline(type, product, component) {
   enableAksStagingDeployment()	
   disableLegacyDeploymentOnAAT()	
   disableLegacyDeployment()	
-  nonServiceApp()	
+  nonServiceApp()
+
+  syncBranchesWithMaster('demo', 'perftest')
 
   after('functionalTest:preview') {	
     steps.archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/cucumber/**/*'	
