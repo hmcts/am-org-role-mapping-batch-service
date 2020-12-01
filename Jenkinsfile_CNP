@@ -33,6 +33,7 @@ def secrets = [
 
 ]	
 
+// Call to sync the following branches with master
 def branchesToSync = ['demo', 'perftest']
 
 withPipeline(type, product, component) {	
