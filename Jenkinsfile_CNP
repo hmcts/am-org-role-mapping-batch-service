@@ -9,7 +9,7 @@ properties(
   ]	
 )	
 
-@Library("Infrastructure@ix-sync-branch-issue")
+@Library("Infrastructure@fix-sync-branch-issue")
 
 def type = "java"	
 def product = "am"	
