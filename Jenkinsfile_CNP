@@ -9,7 +9,7 @@ properties(
   ]	
 )	
 
-@Library("Infrastructure@sync-branches-with-master")
+@Library("Infrastructure")
 
 def type = "java"	
 def product = "am"	
@@ -33,7 +33,7 @@ def secrets = [
 
 ]	
 
-// Configure branches to sync with master
+// Configure branches to sync with master branch
 def branchesToSync = ['demo', 'perftest']
 
 withPipeline(type, product, component) {	
@@ -51,7 +51,7 @@ withPipeline(type, product, component) {
   disableLegacyDeployment()	
   nonServiceApp()
 
-  // Sync demo and perftest with master
+  // Sync demo and perftest with master branch
   syncBranchesWithMaster(branchesToSync)
 
   after('functionalTest:preview') {	
