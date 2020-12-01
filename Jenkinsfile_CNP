@@ -51,6 +51,7 @@ withPipeline(type, product, component) {
   disableLegacyDeployment()	
   nonServiceApp()
 
+  // Sync demo and perftest with master
   syncBranchesWithMaster(branchesToSync)
 
   after('functionalTest:preview') {	
